@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
+import { Button } from './components/ui/button';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -58,12 +59,12 @@ function App() {
                     </h1>
 
                     <div className="rounded-lg bg-card p-8 shadow-lg">
-                        <button
+                        <Button
                             onClick={() => setCount((count) => count + 1)}
                             className="rounded-md bg-primary px-4 py-2 text-primary-foreground transition-colors hover:bg-primary/90"
                         >
                             Count is {count}
-                        </button>
+                        </Button>
 
                         <p className="mt-4 text-muted-foreground">
                             Edit{' '}
