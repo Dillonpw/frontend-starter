@@ -26,7 +26,6 @@ function createApp(projectName) {
         'tsconfig.json',
         'tsconfig.node.json',
         'components.json',
-        'eslint.config.js',
     ];
 
     filesToCopy.forEach((file) => {
@@ -41,7 +40,6 @@ function createApp(projectName) {
         scripts: {
             dev: 'vite',
             build: 'tsc -b && vite build',
-            lint: 'eslint .',
             preview: 'vite preview',
         },
         dependencies: {
@@ -56,18 +54,11 @@ function createApp(projectName) {
             'tw-animate-css': '^1.2.5',
         },
         devDependencies: {
-            '@eslint/js': '^9.21.0',
-            '@tailwindcss/vite': '^4.1.3',
             '@types/node': '^22.14.0',
             '@types/react': '^19.0.10',
             '@types/react-dom': '^19.0.4',
             '@vitejs/plugin-react': '^4.3.4',
-            eslint: '^9.21.0',
-            'eslint-plugin-react-hooks': '^5.1.0',
-            'eslint-plugin-react-refresh': '^0.4.19',
-            globals: '^15.15.0',
             typescript: '~5.7.2',
-            'typescript-eslint': '^8.24.1',
             vite: '^6.2.0',
         },
     };
@@ -86,8 +77,16 @@ function createApp(projectName) {
     console.log(`
 Success! Created ${projectName} at ${process.cwd()}
 
-Inside ${projectName}, you can run several commands immediately:
+✨ What's included:
+  • React 19 with TypeScript
+  • Vite for fast development
+  • Tailwind CSS for styling
+  • shadcn/ui components
 
+To add more components, run:
+  npx shadcn@latest add [component]
+
+🚀 Getting started:
   npm run dev
     Starts the development server.
 
@@ -97,12 +96,12 @@ Inside ${projectName}, you can run several commands immediately:
   npm run preview
     Preview the production build locally.
 
-Get started by running:
+📝 Next steps:
+  1. cd ${projectName}
+  2. npm run dev
+  3. Edit src/App.tsx to start building your app
 
-  cd ${projectName}
-  npm run dev
-
-Thanks for using my starter!
+Happy coding! 🎉
     `);
 }
 
