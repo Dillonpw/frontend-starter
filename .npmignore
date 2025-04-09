@@ -1,0 +1,27 @@
+# Development
+.git
+.gitignore
+node_modules
+.env
+.env.*
+
+# Build output
+dist
+build
+
+# IDE
+.vscode
+.idea
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage
+
+# Misc
+.DS_Store
+*.pem 
