@@ -1,6 +1,6 @@
 {
     "name": "dillonpw-starter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A modern React starter template with Vite, TypeScript, and Tailwind CSS with shadcn/ui",
     "type": "module",
     "main": "index.js",
