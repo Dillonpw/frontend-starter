@@ -1,15 +1,22 @@
 {
-    "name": "dillonpw-starter",
+    "name": "create-dillonpw-app",
     "version": "1.0.2",
     "description": "A modern React starter template with Vite, TypeScript, and Tailwind CSS with shadcn/ui",
     "type": "module",
     "main": "index.js",
     "bin": {
-        "create-dillonpw-app": "./bin/create.js"
+        "create-dillonpw-app": "cli/create.js"
     },
     "files": [
-        "bin/",
-        "template/",
+        "cli/",
+        "src/",
+        "public/",
+        "index.html",
+        "vite.config.ts",
+        "tsconfig.json",
+        "tsconfig.node.json",
+        "components.json",
+        "eslint.config.js",
         "LICENSE",
         "README.md"
     ],
