@@ -27,6 +27,7 @@ function createApp(projectName) {
         'tsconfig.json',
         'tsconfig.node.json',
         'components.json',
+        '.gitignore',
     ];
 
     filesToCopy.forEach((file) => {
