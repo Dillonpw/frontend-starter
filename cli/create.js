@@ -4,6 +4,7 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs';
+import readline from 'readline';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -109,9 +110,19 @@ Happy coding! 🎉
 const projectName = process.argv[2];
 
 if (!projectName) {
-    console.log('Please specify the project name:');
-    console.log('  npx create-dillonpw-app my-app');
-    process.exit(1);
-}
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
 
-createApp(projectName);
+    rl.question('What is your project name? ', (name) => {
+        rl.close();
+        if (!name) {
+            console.log('Project name cannot be empty. Please try again.');
+            process.exit(1);
+        }
+        createApp(name);
+    });
+} else {
+    createApp(projectName);
+}
