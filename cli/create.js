@@ -51,6 +51,7 @@ function createApp(projectName) {
             'react-dom': '^19.0.0',
             'tailwind-merge': '^3.2.0',
             tailwindcss: '^4.1.3',
+            '@tailwindcss/vite': '^4.1.3', // Added this line to fix the missing dependency
             'tw-animate-css': '^1.2.5',
         },
         devDependencies: {
