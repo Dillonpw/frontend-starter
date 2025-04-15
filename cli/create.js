@@ -27,7 +27,6 @@ function createApp(projectName) {
         'tsconfig.json',
         'tsconfig.node.json',
         'components.json',
-        '.gitignore',
     ];
 
     filesToCopy.forEach((file) => {
@@ -38,6 +37,54 @@ function createApp(projectName) {
             console.warn(`Warning: ${file} not found in template, skipping...`);
         }
     });
+
+    // Create .gitignore file directly
+    const gitignoreContent = `# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+build/
+out/
+
+# Coverage directory
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+`;
+    fs.writeFileSync('.gitignore', gitignoreContent);
 
     // Create a new package.json
     const packageJson = {
@@ -79,7 +126,11 @@ function createApp(projectName) {
 
     // Initialize git repository
     execSync('git init', { stdio: 'inherit' });
-    execSync('git add .gitignore', { stdio: 'inherit' });
+
+    // Force add the .gitignore file to ensure it's tracked
+    execSync('git add -f .gitignore', { stdio: 'inherit' });
+
+    // Add all other files
     execSync('git add .', { stdio: 'inherit' });
     execSync('git commit -m "Initial commit"', { stdio: 'inherit' });
 
