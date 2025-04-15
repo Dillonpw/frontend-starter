@@ -31,7 +31,12 @@ function createApp(projectName) {
     ];
 
     filesToCopy.forEach((file) => {
-        execSync(`cp -r ${join(templateDir, file)} .`, { stdio: 'inherit' });
+        const sourcePath = join(templateDir, file);
+        if (fs.existsSync(sourcePath)) {
+            execSync(`cp -r ${sourcePath} .`, { stdio: 'inherit' });
+        } else {
+            console.warn(`Warning: ${file} not found in template, skipping...`);
+        }
     });
 
     // Create a new package.json
@@ -53,7 +58,7 @@ function createApp(projectName) {
             'react-dom': '^19.0.0',
             'tailwind-merge': '^3.2.0',
             tailwindcss: '^4.1.3',
-            '@tailwindcss/vite': '^4.1.3', // Added this line to fix the missing dependency
+            '@tailwindcss/vite': '^4.1.3',
             'tw-animate-css': '^1.2.5',
         },
         devDependencies: {
