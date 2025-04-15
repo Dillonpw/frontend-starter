@@ -79,6 +79,7 @@ function createApp(projectName) {
 
     // Initialize git repository
     execSync('git init', { stdio: 'inherit' });
+    execSync('git add .gitignore', { stdio: 'inherit' });
     execSync('git add .', { stdio: 'inherit' });
     execSync('git commit -m "Initial commit"', { stdio: 'inherit' });
 

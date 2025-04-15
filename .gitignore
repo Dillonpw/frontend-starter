@@ -30,3 +30,15 @@ dist-ssr
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Build output
+build/
+out/
+
+# Coverage directory
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
