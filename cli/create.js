@@ -27,6 +27,7 @@ function createApp(projectName) {
         'tsconfig.json',
         'tsconfig.node.json',
         'components.json',
+        '.prettierrc',
     ];
 
     filesToCopy.forEach((file) => {
@@ -95,6 +96,8 @@ coverage/
             dev: 'vite',
             build: 'tsc -b && vite build',
             preview: 'vite preview',
+            format: 'prettier --write .',
+            'format:check': 'prettier --check .'
         },
         dependencies: {
             '@radix-ui/react-slot': '^1.2.0',
@@ -113,6 +116,8 @@ coverage/
             '@types/react': '^19.0.10',
             '@types/react-dom': '^19.0.4',
             '@vitejs/plugin-react': '^4.3.4',
+            'prettier': '^3.2.5',
+            'prettier-plugin-tailwindcss': '^0.5.12',
             typescript: '~5.7.2',
             vite: '^6.2.0',
         },
@@ -142,6 +147,7 @@ Success! Created ${projectName} at ${process.cwd()}
   • Vite for fast development
   • Tailwind CSS for styling
   • shadcn/ui components
+  • Prettier with Tailwind plugin for code formatting
 
 To add more components, run:
   npx shadcn@latest add [component]
