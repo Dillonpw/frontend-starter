@@ -21,7 +21,7 @@ function createApp(projectName) {
     // Copy template files
     const filesToCopy = [
         'src',
-        'public',
+        'assets',
         'index.html',
         'vite.config.ts',
         'tsconfig.json',
