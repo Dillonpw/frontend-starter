@@ -16,6 +16,7 @@
         "tsconfig.json",
         "tsconfig.node.json",
         "components.json",
+        ".prettierrc",
         "LICENSE",
         "README.md"
     ],
