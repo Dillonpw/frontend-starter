@@ -28,7 +28,7 @@ npx create-dillonpw-app my-app
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/dillonpw/create-dillonpw-app.git my-app
+git clone https://github.com/dillonpw/frontend-starter.git my-app
 cd my-app
 ```
 
