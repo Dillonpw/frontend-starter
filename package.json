@@ -1,6 +1,6 @@
 {
     "name": "create-dillonpw-app",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "A modern React starter template with Vite, TypeScript, and Tailwind CSS with shadcn/ui",
     "type": "module",
     "main": "index.js",
@@ -60,12 +60,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dillonpw/dillonpw-starter.git"
+        "url": "git+https://github.com/dillonpw/frontend-starter.git"
     },
     "bugs": {
-        "url": "https://github.com/dillonpw/dillonpw-starter/issues"
+        "url": "https://github.com/dillonpw/frontend-starter/issues"
     },
-    "homepage": "https://github.com/dillonpw/dillonpw-starter#readme",
+    "homepage": "https://github.com/dillonpw/frontend-starter#readme",
     "engines": {
         "node": ">=14.0.0"
     }
